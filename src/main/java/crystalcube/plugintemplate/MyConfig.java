@@ -75,5 +75,6 @@ public class MyConfig {
 
     public void setIsEnabled(boolean value){
         isEnabled = value;
+        saveConfig();
     }
 }
