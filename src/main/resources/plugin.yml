@@ -1,0 +1,31 @@
+name: PluginTemplate
+version: '${project.version}'
+main: crystalcube.plugintemplate.PluginTemplate
+api-version: '1.20'
+load: STARTUP
+
+description: now you don't need to write this files every time you start new project
+
+commands:
+  plugintemplate:
+    description: simple
+    usage: type </plugintemplate help> for help
+    permission-message: You don't have <permission>
+
+permissions.*:
+  plugintemplate:
+    description: Gives access to all PluginTemplate actions and commands
+    default: op
+    children:
+      plugintemplate.help: true
+      plugintemplate.reload: true
+      plugintemplate.toggleConfigSwitch: true
+  plugintemplate.help:
+    description: Has permission to help command
+    default: op
+  plugintemplate.reload:
+    description: Has permission to use the reload command
+    default: op
+  plugintemplate.toggleConfigSwitch:
+    description: Has permission to use the enable command
+    default: op
